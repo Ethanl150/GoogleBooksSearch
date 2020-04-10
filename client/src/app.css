@@ -1,9 +1,27 @@
+/* body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    background-image: linear-gradient(to bottom, rgba(148, 120, 120, 0.5), rgb(156, 223, 156, 0.5));
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 .nav {
-    text-decoration: underline;
+    color: white;
+}
+
+.nav:hover {
+    color: rgb(212, 205, 164);
 }
 
 .btn {
     height: 40px;
+    box-shadow: 2px 3px black;
 }
 
 .img {
@@ -15,6 +33,10 @@
 .con {
     background-color: rgb(192, 184, 184);
 }
+
+/* .container-fluid {
+    background: none;
+} */
 
 a {
     display: contents;

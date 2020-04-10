@@ -5,9 +5,6 @@ const router = require("express").Router();
 // API Routes
 
 
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/public/index.html"));
-});
 
 const booksController = require("../controllers/booksController");
 
@@ -17,5 +14,9 @@ router.route("/api/books")
 
 router.route("/api/books/:id")
   .delete(booksController.remove);
+
+router.use(function (req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 module.exports = router;

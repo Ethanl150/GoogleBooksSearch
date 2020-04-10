@@ -3,9 +3,10 @@ const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
   title: String,
-  authors: String,
+  authors: [String],
   link: String,
   description: String,
+  image: String,
   date: {
     type: Date,
     default: Date.now
