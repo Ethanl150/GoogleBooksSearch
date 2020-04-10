@@ -1,0 +1,30 @@
+.nav {
+    text-decoration: underline;
+}
+
+.btn {
+    height: 40px;
+}
+
+.img {
+    /* background-color: blue; */
+    width: 100px;
+    height: 175px;
+}
+
+.con {
+    background-color: rgb(192, 184, 184);
+}
+
+a {
+    display: contents;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* .row {
+    background-color: rgb(192, 184, 184);
+    padding: 0;
+} */
