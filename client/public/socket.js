@@ -1,4 +1,4 @@
-const socket = io.connect("http://localhost:3001" || "https://intense-anchorage-26607.herokuapp.com/");
+const socket = io.connect("http://localhost:3001");
 
 const handleClick = e => {
     const element = event.target;
