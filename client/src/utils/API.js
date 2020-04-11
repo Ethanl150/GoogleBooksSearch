@@ -1,9 +1,8 @@
 import axios from "axios";
-import key from "./key"
 
 export default {
   getBooks: query => {
-    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query + "&key=" + key.APIKEY);
+    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query + "&key=AIzaSyAvmwvkjISmyWsCd0ug0DpPu655wYPyGSY");
   },
   getSavedBooks: function() {
     return axios.get("/api/books");
