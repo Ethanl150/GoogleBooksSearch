@@ -7,8 +7,6 @@ import Saved from "./pages/Saved.js"
 import "./app.css"
 
 function App() {
-
-
   return (
     <Router>
       <div>

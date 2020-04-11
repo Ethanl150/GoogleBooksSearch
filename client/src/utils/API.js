@@ -1,9 +1,9 @@
 import axios from "axios";
-// AIzaSyAvmwvkjISmyWsCd0ug0DpPu655wYPyGSY
+import key from "./key"
+
 export default {
-  // Gets all books
   getBooks: query => {
-    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query + "&key=AIzaSyAvmwvkjISmyWsCd0ug0DpPu655wYPyGSY");
+    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query + "&key=" + key.APIKEY);
   },
   getSavedBooks: function() {
     return axios.get("/api/books");

@@ -6,26 +6,27 @@ const app = express();
 const socket = require("socket.io")
 const PORT = process.env.PORT || 3001;
 
-// Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
+
 app.use(routes);
 
-// Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
-// Start the API server
 const server = app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
-const io = socket(app)
+const io = socket(server)
 
 io.on("connection", socket => {
-  console.log(socket.id)
+
+  socket.on("saved", data => {
+    io.sockets.emit("saved", data)
+  })
+
 })

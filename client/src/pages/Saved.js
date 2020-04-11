@@ -12,7 +12,6 @@ function Saved() {
         API.deleteBook(id)
             .then(res => {
                 setBooks(books.filter(book => book._id !== id))
-                console.log(res)
             })
             .catch(err => console.log(err))
     }
@@ -26,7 +25,6 @@ function Saved() {
             .catch(err => console.log(err))
     }
 
-
     return (
         <>
             <div className="container-fluid bg-light d-flex flex-column align-items-center">
@@ -35,7 +33,7 @@ function Saved() {
             <div className="container mt-5">
                 {books && books.map((book, i) => (
                     <>
-                        <div className="mt-5" key={i}>
+                        <div className="mt-5">
                             <div className="row justify-content-between">
                                 <div className="row col-sm-9 flex-column">
                                     <h1>{book.title}</h1>

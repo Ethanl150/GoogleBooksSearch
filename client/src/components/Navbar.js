@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 function Navbar() {
-
     return (
         <nav className="navbar navbar-dark bg-info d-flex justify-content-start p-3">
             <h3>Google Books</h3>
