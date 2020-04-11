@@ -1,9 +1,9 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const socket = require("socket.io")
+require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
